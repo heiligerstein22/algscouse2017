@@ -104,7 +104,7 @@ public class Deque<Item> implements Iterable<Item> {
 		return new DequeIterator();
 	}
 
-	private class DequeIterator implements Iterator<Item> {
+	private class DequeIterator implements Iterable<Item> {
 
 		private Node current = first;
 
@@ -129,6 +129,9 @@ public class Deque<Item> implements Iterable<Item> {
 
 	// unit testing (optional)
 	public static void main(String[] args) {
+
+		/*
+
 		Deque<String> myDeque = new Deque<String>();
 		myDeque.addFirst("a");
 		myDeque.addFirst("b");
@@ -143,7 +146,6 @@ public class Deque<Item> implements Iterable<Item> {
 			System.out.println(""+item);
 		}
 
-		/*
 		System.out.printf(myDeque.removeLast()+"\n");
 		System.out.printf(myDeque.isEmpty()+"\n");
 		System.out.printf(myDeque.size()+"\n");
